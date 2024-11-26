@@ -22,10 +22,10 @@ public class OrderController {
     }
 
     @GetMapping(value = "/idOrder/{id}")
-    public ResponseEntity<List<Order>> getByidProduto(@PathVariable("idProduto") String id) {
-        List<Order> orders = this.orderService.findOrderById(id);
+    public ResponseEntity<Order> getByidProduto(@PathVariable("idProduto") String id) {
+        Order order = this.orderService.findByOrderId(id);
 
-        return new ResponseEntity<>(orders, HttpStatus.OK);
+        return new ResponseEntity<>(order, HttpStatus.OK);
     }
 
     // @GetMapping(value = "/idProduto/{id}")

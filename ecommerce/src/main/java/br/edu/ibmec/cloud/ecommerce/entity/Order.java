@@ -9,7 +9,7 @@ import lombok.Data;
 @Container(containerName = "orders")
 public class Order {
     @Id
-    private String idOrder;
+    private String orderId;
     @PartitionKey
     private String idProduto;
     private int idCliente;

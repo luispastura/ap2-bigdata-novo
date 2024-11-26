@@ -37,7 +37,7 @@ public class CheckoutService {
             }
 
             Order order = new Order();
-            order.setIdOrder(UUID.randomUUID().toString());
+            order.setOrderId(UUID.randomUUID().toString());
             order.setDataTransacao(LocalDateTime.now());
             order.setIdProduto(produto.getIdProduto());
             order.setIdCliente(idCliente);

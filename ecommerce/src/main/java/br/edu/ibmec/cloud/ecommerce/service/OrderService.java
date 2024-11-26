@@ -14,12 +14,8 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public List<Order> findOrderByIdCliente(String IdCliente) {
-        return this.orderRepository.findOrderByIdCliente(IdCliente);
-    }
-
-    public List<Order> findOrderById(String idOrder) {
-        return this.orderRepository.findOrderById(idOrder);
+    public Order findByOrderId(String id) {
+        return this.orderRepository.findByOrderId(id);
     }
 
     public java.util.Optional<Order> findById(String id) {
@@ -31,7 +27,7 @@ public class OrderService {
     }
 
     public void save(Order order) {
-        order.setIdOrder(UUID.randomUUID().toString());
+        order.setOrderId(UUID.randomUUID().toString());
         this.orderRepository.save(order);
     }
 

@@ -6,9 +6,5 @@ import br.edu.ibmec.cloud.ecommerce.entity.Order;
 
 @Repository
 public interface OrderRepository extends CosmosRepository<Order, String> {
-    List<Order> findOrderByIdCliente(String idCliente);
-    List<Order> findOrderById(String id);
-    List<Order> findByidProduto(String id);
-    List<Order> findByIdCliente(String idCliente);
-    List<Order> findByIdOrder(String idOrder);
+    Order findByOrderId(String orderId);
 }

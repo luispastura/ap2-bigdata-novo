@@ -40,7 +40,7 @@ public class CheckoutController {
             response.setDataTransacao(order.getDataTransacao());
             response.setIdProduto(order.getIdProduto());
             response.setStatus(order.getStatus());
-            response.setIdOrder(order.getIdOrder());
+            response.setIdOrder(order.getOrderId());
             response.setErro(null); // Nenhum erro se a compra foi bem-sucedida
             return new ResponseEntity<>(response, HttpStatus.CREATED);
 
